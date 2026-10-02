@@ -1,0 +1,29 @@
+ANEXO 1 - DOCUMENTAÇÃO DO AUTOFIX
+
+Tecnologias: HTML, CSS, JavaScript, Node.js, Express, Prisma e JWT.
+
+1. Objetivo
+Criar um sistema para organizar clientes, veículos e ordens de serviço da oficina AutoFix.
+
+2. Funcionalidades
+- Login com e-mail e senha.
+- Token JWT com validade de 30 minutos.
+- Dashboard com usuário autenticado.
+- Cadastro, edição, exclusão, listagem e busca de clientes.
+- CPF armazenado de forma criptografada.
+- Senha armazenada com hash usando bcrypt.
+- Veículos obrigatoriamente vinculados a cliente.
+- Cadastro, edição, exclusão e listagem de ordens de serviço.
+- OS ordenadas por data e com cliente e veículo consolidados.
+
+3. Organização
+Frontend: HTML/CSS/JavaScript.
+Backend: Node.js + Express.
+Acesso ao banco: Prisma.
+Autenticação: JWT.
+
+4. Regra de segurança
+As rotas de clientes, veículos e OS exigem o token no cabeçalho Authorization: Bearer TOKEN.
+
+5. Observação
+O projeto não utiliza código SQL escrito manualmente. O Prisma controla o modelo e as alterações do banco.

@@ -1,0 +1,1 @@
+document.getElementById('loginForm').addEventListener('submit',async e=>{e.preventDefault();try{const r=await api('/auth/login',{method:'POST',body:JSON.stringify({email:email.value,senha:senha.value})});localStorage.setItem('autofixToken',r.token);localStorage.setItem('autofixNome',r.nome);location.href='dashboard.html'}catch(e){mensagem.textContent=e.message}});

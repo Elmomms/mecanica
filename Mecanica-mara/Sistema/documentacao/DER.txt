@@ -1,0 +1,35 @@
+DER - AUTOFIX
+
+USUARIO
+id (PK)
+nome
+email
+senha
+
+CLIENTE
+id (PK)
+nome
+cpf
+telefone
+email
+endereco
+
+VEICULO
+id (PK)
+placa
+marca
+modelo
+ano
+clienteId (FK -> CLIENTE.id)
+
+ORDEM_SERVICO
+id (PK)
+data
+descricao
+valor
+status
+veiculoId (FK -> VEICULO.id)
+
+Relacionamentos:
+CLIENTE 1 ---- N VEICULO
+VEICULO 1 ---- N ORDEM_SERVICO
