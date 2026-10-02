@@ -1,1 +1,9 @@
-const r=require('express').Router();const c=require('../controllers/clienteController');r.get('/',c.listar);r.post('/',c.criar);r.put('/:id',c.editar);r.delete('/:id',c.excluir);module.exports=r;
+const router = require('express').Router();
+const clienteController = require('../controllers/clienteController');
+
+router.get('/', clienteController.listar);
+router.post('/', clienteController.criar);
+router.put('/:id', clienteController.editar);
+router.delete('/:id', clienteController.excluir);
+
+module.exports = router;
